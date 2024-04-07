@@ -24,10 +24,10 @@ public class abstractComponent {
 	@FindBy(css="[routerlink*='myorders']")
 	 WebElement orderHeader;
 	
-	//PageFactory
 	@FindBy(css="#desktopBannerWrapped > div")
-	 WebElement popUpBanner;
-	@FindBy(css="#close-icon")
+	 WebElement notif;
+	
+	@FindBy(id="close-icon")
 	 WebElement popUpAds;
 	
 	public abstractComponent(WebDriver driver) {
@@ -37,7 +37,7 @@ public class abstractComponent {
 	}
 
 	public void waitElementForAppear(By findBy) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 		
 	}
@@ -67,15 +67,20 @@ public class abstractComponent {
 	}
 	
 	public HomePage alertNotif() {
-		waitWebElementForAppear(popUpBanner);
+		waitWebElementForAppear(notif);
+		//close notif
 		driver.findElement(By.cssSelector("#desktopBannerWrapped > div > div:nth-child(3) > div:nth-child(2) > button:nth-child(1)")).click();
 		HomePage homepage = new HomePage(driver);
 		return homepage;
 	}
 	
 	public HomePage popUpAds() {
+		WebElement iframe = driver.findElement(By.cssSelector("#moe-onsite-campaign-660b1c43c47fb6e58618110e"));
+		driver.switchTo().frame(iframe);
+		waitWebElementForAppear(driver.findElement(By.cssSelector("body > div > div.button-container.no-bounds")));
 		waitWebElementForAppear(popUpAds);
 		popUpAds.click();
+		driver.switchTo().defaultContent();
 		HomePage homepage = new HomePage(driver);
 		return homepage;
 	}
