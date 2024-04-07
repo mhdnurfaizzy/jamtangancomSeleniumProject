@@ -14,8 +14,6 @@ import mhdnurfaizzy.testComponent.baseTesting;
 
 public class login extends baseTesting{
 	
-	
-	
 	@Test
 	public void loginApp() {
 	

@@ -30,6 +30,9 @@ public class abstractComponent {
 	@FindBy(id="close-icon")
 	 WebElement popUpAds;
 	
+	@FindBy(tagName="iframe")
+	 WebElement iframe;
+	
 	public abstractComponent(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver;
@@ -75,10 +78,8 @@ public class abstractComponent {
 	}
 	
 	public HomePage popUpAds() {
-		WebElement iframe = driver.findElement(By.cssSelector("#moe-onsite-campaign-660b1c43c47fb6e58618110e"));
-		driver.switchTo().frame(iframe);
-		waitWebElementForAppear(driver.findElement(By.cssSelector("body > div > div.button-container.no-bounds")));
-		waitWebElementForAppear(popUpAds);
+		waitWebElementForAppear(iframe);
+		driver.switchTo().frame(0);
 		popUpAds.click();
 		driver.switchTo().defaultContent();
 		HomePage homepage = new HomePage(driver);
