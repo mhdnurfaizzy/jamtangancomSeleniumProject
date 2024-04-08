@@ -23,12 +23,23 @@ public class SearchPage extends abstractComponent{
 		 WebElement searchBar;
 		@FindBy(css=".ic-search.text-2xl")
 		 WebElement searchIcon;
+		@FindBy(css="div[class='text-primary-1 font-black text-sm']")
+		 WebElement getProdukTerkaitText;
+		@FindBy(css=".ic-close.text-2xl")
+		 WebElement clearArea;
 		
 		
-	public HomePage searchProduct() {
+		
+	public void searchProduct() {
 		searchBar.sendKeys("casio");
 		searchIcon.click();
-		return new HomePage(driver);
+	}
+	
+	public String verifyProductTerkait() {
+		searchBar.sendKeys("casio");
+		waitWebElementForAppear(getProdukTerkaitText);
+		clearArea.click();
+		return getProdukTerkaitText.getText();
 	}
 
 }

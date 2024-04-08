@@ -1,6 +1,7 @@
 package mhdnurfaizzy.Test;
 
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import mhdnurfaizzy.pageobjects.HomePage;
@@ -12,7 +13,7 @@ public class login extends baseTesting{
 	
 	@Test
 	public void loginApp() {
-	
+	//Login
 	LoginPage loginPage = new LoginPage(driver);
 	loginPage.loginApplication();
 	HomePage homePage = new HomePage(driver);
@@ -24,13 +25,16 @@ public class login extends baseTesting{
 	catch(Exception e)
 	  {
 	     // Code for Handling the exception
-		System.out.println("Notif not shown");
+		System.out.println("Notif Pop up not shown");
 	  }
 	homePage.popUpAds();
+	
+	//Search Fitur
 	SearchPage searchPage = new SearchPage(driver);
+	String productTerkait = searchPage.verifyProductTerkait();
+	Assert.assertTrue(productTerkait.equalsIgnoreCase("Produk Terkait"));
 	searchPage.searchProduct();
 	homePage.popUpAds();
-
 		
 	}
 	
