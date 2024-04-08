@@ -35,6 +35,7 @@ public class login extends baseTesting{
 	Assert.assertTrue(productTerkait.equalsIgnoreCase("Produk Terkait"));
 	searchPage.searchProduct();
 	homePage.popUpAds();
+	searchPage.goToFirstProduct();
 		
 	}
 	

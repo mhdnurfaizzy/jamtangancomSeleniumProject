@@ -27,6 +27,8 @@ public class SearchPage extends abstractComponent{
 		 WebElement getProdukTerkaitText;
 		@FindBy(css=".ic-close.text-2xl")
 		 WebElement clearArea;
+		@FindBy(xpath="(//div[@class='product-card relative'])[1]")
+		 WebElement firstProduct;
 		
 		
 		
@@ -40,6 +42,11 @@ public class SearchPage extends abstractComponent{
 		waitWebElementForAppear(getProdukTerkaitText);
 		clearArea.click();
 		return getProdukTerkaitText.getText();
+	}
+	
+	public void goToFirstProduct() {
+		waitWebElementForAppear(firstProduct);
+		firstProduct.click();
 	}
 
 }
