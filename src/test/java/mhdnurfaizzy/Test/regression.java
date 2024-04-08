@@ -9,10 +9,10 @@ import mhdnurfaizzy.pageobjects.LoginPage;
 import mhdnurfaizzy.pageobjects.SearchPage;
 import mhdnurfaizzy.testComponent.baseTesting;
 
-public class login extends baseTesting{
+public class regression extends baseTesting{
 	
 	@Test
-	public void loginApp() {
+	public void Regression() {
 	//Login
 	LoginPage loginPage = new LoginPage(driver);
 	loginPage.loginApplication();

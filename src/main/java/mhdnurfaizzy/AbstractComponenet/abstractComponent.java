@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import mhdnurfaizzy.pageobjects.CartPage;
-import mhdnurfaizzy.pageobjects.CheckoutPage;
 import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.OrderPage;
 
