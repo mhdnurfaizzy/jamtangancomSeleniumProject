@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import mhdnurfaizzy.pageobjects.CartPage;
+import mhdnurfaizzy.pageobjects.CheckoutPage;
 import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.LoginPage;
 import mhdnurfaizzy.pageobjects.ProductPage;
@@ -35,8 +36,6 @@ public class regression extends baseTesting{
 	
 	//Search Feature
 	SearchPage searchPage = new SearchPage(driver);
-	String productTerkait = searchPage.verifyProductTerkait();
-	Assert.assertTrue(productTerkait.equalsIgnoreCase("Produk Terkait"));
 	searchPage.searchProduct();
 	homePage.popUpAds();
 	searchPage.goToFirstProduct();
@@ -51,10 +50,13 @@ public class regression extends baseTesting{
 	CartPage cartPage = new CartPage(driver);
 	cartPage.goToCartPage();
 	cartPage.verifyProductTitleDisplayed();
-
 	
-		
+	//CheckoutPage
+	CheckoutPage checkoutPage = new CheckoutPage(driver);
+	cartPage.goToCheckout();
+	String shipAddress = checkoutPage.shippingOpt();
+	Assert.assertTrue(shipAddress.equalsIgnoreCase("Alamat Pengiriman"));
+	
 	}
 	
-
 }

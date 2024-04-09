@@ -40,7 +40,6 @@ public class SearchPage extends abstractComponent{
 	public String verifyProductTerkait() {
 		searchBar.sendKeys("casio");
 		waitWebElementForAppear(getProdukTerkaitText);
-		clearArea.click();
 		return getProdukTerkaitText.getText();
 	}
 	

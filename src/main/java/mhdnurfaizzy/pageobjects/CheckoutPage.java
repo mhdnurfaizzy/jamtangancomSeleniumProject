@@ -27,6 +27,8 @@ public class CheckoutPage extends abstractComponent{
 	
 	@FindBy(css=".ta-item:nth-of-type(2)")
 	 WebElement selectCountry;
+	@FindBy(css="div[class='bg-neutral-900 p-4 md:p-6 md:rounded-2'] span:nth-child(2)")
+	 WebElement shippingOpt;
 	
 	By result = By.cssSelector(".ta-results");
 	
@@ -43,6 +45,12 @@ public class CheckoutPage extends abstractComponent{
         b.scrollToElement(submit).perform();
 		submit.click();
 		return new ConfirmationPage(driver);
+	}
+	
+	public String shippingOpt() {
+		waitWebElementForAppear(shippingOpt);
+		return shippingOpt.getText();
+		
 	}
 	
 
