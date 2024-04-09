@@ -15,8 +15,8 @@ public class CartPage extends abstractComponent{
 	@FindBy(css="li[class='totalRow'] button[type='button']")
 	 WebElement checkoutEle;
 	
-	@FindBy(css=".cartSection h3")
-	 List<WebElement> productTitle;
+	@FindBy(css="div[class='block']")
+	WebElement productTitle;
 
 	public CartPage(WebDriver driver) {
 		super(driver);
@@ -24,9 +24,9 @@ public class CartPage extends abstractComponent{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public boolean verifyProductTitleDisplayed(String productName) {
-		Boolean match = productTitle.stream().anyMatch(titleProduct->titleProduct.getText().equalsIgnoreCase(productName));
-		return match;
+	public void verifyProductTitleDisplayed() {
+		waitWebElementForAppear(productTitle);
+		productTitle.isDisplayed();
 	}
 	
 	public CheckoutPage goToCheckout() {

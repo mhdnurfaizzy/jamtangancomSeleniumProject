@@ -4,6 +4,7 @@ package mhdnurfaizzy.Test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import mhdnurfaizzy.pageobjects.CartPage;
 import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.LoginPage;
 import mhdnurfaizzy.pageobjects.ProductPage;
@@ -47,6 +48,10 @@ public class regression extends baseTesting{
 	Assert.assertTrue(textMessageSuccessATC.equalsIgnoreCase("Sukses menambahkan produk ke keranjang"));
 	
 	//Cart Page
+	CartPage cartPage = new CartPage(driver);
+	cartPage.goToCartPage();
+	cartPage.verifyProductTitleDisplayed();
+
 	
 		
 	}
