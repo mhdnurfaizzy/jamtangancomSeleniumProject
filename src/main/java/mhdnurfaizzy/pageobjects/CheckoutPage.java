@@ -28,7 +28,12 @@ public class CheckoutPage extends abstractComponent{
 	@FindBy(css=".ta-item:nth-of-type(2)")
 	 WebElement selectCountry;
 	@FindBy(css="div[class='bg-neutral-900 p-4 md:p-6 md:rounded-2'] span:nth-child(2)")
-	 WebElement shippingOpt;
+	 WebElement addressTitle;
+	@FindBy(css="button[aria-label='Choose shipping method']")
+	 WebElement shipOpt;
+	@FindBy(xpath="(//li[@class='text-neutral-0 cursor-pointer py-4 pr-2 md:p-4 border-neutral-700 border-b-1 md:rounded-t-2 shippingItem'])[1]")
+	 WebElement firstKurir;
+	
 	
 	By result = By.cssSelector(".ta-results");
 	
@@ -47,10 +52,16 @@ public class CheckoutPage extends abstractComponent{
 		return new ConfirmationPage(driver);
 	}
 	
-	public String shippingOpt() {
-		waitWebElementForAppear(shippingOpt);
-		return shippingOpt.getText();
+	public String address() {
+		waitWebElementForAppear(addressTitle);
+		return addressTitle.getText();
 		
+	}
+	
+	public void chooseShipOpt() {
+		shipOpt.click();
+		waitWebElementForAppear(firstKurir);
+		firstKurir.click();
 	}
 	
 

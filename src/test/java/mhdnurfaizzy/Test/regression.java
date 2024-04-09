@@ -54,8 +54,9 @@ public class regression extends baseTesting{
 	//CheckoutPage
 	CheckoutPage checkoutPage = new CheckoutPage(driver);
 	cartPage.goToCheckout();
-	String shipAddress = checkoutPage.shippingOpt();
+	String shipAddress = checkoutPage.address();
 	Assert.assertTrue(shipAddress.equalsIgnoreCase("Alamat Pengiriman"));
+	checkoutPage.chooseShipOpt();
 	
 	}
 	
