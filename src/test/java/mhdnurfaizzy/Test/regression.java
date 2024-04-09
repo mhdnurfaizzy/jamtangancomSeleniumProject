@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.LoginPage;
+import mhdnurfaizzy.pageobjects.ProductPage;
 import mhdnurfaizzy.pageobjects.SearchPage;
 import mhdnurfaizzy.testComponent.baseTesting;
 
@@ -16,6 +17,8 @@ public class regression extends baseTesting{
 	//Login
 	LoginPage loginPage = new LoginPage(driver);
 	loginPage.loginApplication();
+	
+	//Home Page
 	HomePage homePage = new HomePage(driver);
 	try
 	   {
@@ -29,13 +32,22 @@ public class regression extends baseTesting{
 	  }
 	homePage.popUpAds();
 	
-	//Search Fitur
+	//Search Feature
 	SearchPage searchPage = new SearchPage(driver);
 	String productTerkait = searchPage.verifyProductTerkait();
 	Assert.assertTrue(productTerkait.equalsIgnoreCase("Produk Terkait"));
 	searchPage.searchProduct();
 	homePage.popUpAds();
 	searchPage.goToFirstProduct();
+	
+	//ProductPage
+	ProductPage productPage = new ProductPage(driver);
+	productPage.addProductToCart();
+	String textMessageSuccessATC = productPage.getTextMessaggeAddToCart();
+	Assert.assertTrue(textMessageSuccessATC.equalsIgnoreCase("Sukses menambahkan produk ke keranjang"));
+	
+	//Cart Page
+	
 		
 	}
 	

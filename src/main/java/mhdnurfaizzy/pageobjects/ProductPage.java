@@ -17,6 +17,28 @@ public class ProductPage extends abstractComponent{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css="li[class='totalRow'] button[type='button']")
-	 WebElement checkoutEle;
+	@FindBy(css="#btn-add-to-cart")
+	 WebElement btnAddToCart;
+	@FindBy(css="#btn-add-to-cart")
+	 WebElement btnBuyNow;
+	@FindBy(css="#btn-add-to-cart")
+	 WebElement btnAddQty;
+	@FindBy(css="#btn-add-to-cart")
+	 WebElement btnLowQty;
+	@FindBy(css=".message.text-xs.leading-normal.font-bold")
+	 WebElement successMesaggeAddToCart;
+	
+	
+	public void addProductToCart() {
+		waitWebElementForAppear(btnAddToCart);
+		btnAddToCart.click();
+	
+	}
+	
+	public String getTextMessaggeAddToCart() {
+		waitWebElementForAppear(successMesaggeAddToCart);
+		return successMesaggeAddToCart.getText();
+	}
+	
+	
 }
