@@ -33,6 +33,8 @@ public class CheckoutPage extends abstractComponent{
 	 WebElement shipOpt;
 	@FindBy(xpath="(//li[@class='text-neutral-0 cursor-pointer py-4 pr-2 md:p-4 border-neutral-700 border-b-1 md:rounded-t-2 shippingItem'])[1]")
 	 WebElement firstKurir;
+	@FindBy(css=".mw-ripple-effect.btn.rounded.text-sm.relative.overflow-hidden.w-full.btn-filled.text-neutral-1000.bg-primary-1.uppercase")
+	 WebElement btnGotoPayment;
 	
 	
 	By result = By.cssSelector(".ta-results");
@@ -62,6 +64,12 @@ public class CheckoutPage extends abstractComponent{
 		shipOpt.click();
 		waitWebElementForAppear(firstKurir);
 		firstKurir.click();
+	}
+	
+	public PaymentPage goToPaymentPage() {
+		waitWebElementForAppear(btnGotoPayment);
+		btnGotoPayment.click();
+		return new PaymentPage(driver);
 	}
 	
 

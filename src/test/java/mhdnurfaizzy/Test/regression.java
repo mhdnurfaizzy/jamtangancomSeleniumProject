@@ -8,6 +8,7 @@ import mhdnurfaizzy.pageobjects.CartPage;
 import mhdnurfaizzy.pageobjects.CheckoutPage;
 import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.LoginPage;
+import mhdnurfaizzy.pageobjects.PaymentPage;
 import mhdnurfaizzy.pageobjects.ProductPage;
 import mhdnurfaizzy.pageobjects.SearchPage;
 import mhdnurfaizzy.testComponent.baseTesting;
@@ -57,6 +58,13 @@ public class regression extends baseTesting{
 	String shipAddress = checkoutPage.address();
 	Assert.assertTrue(shipAddress.equalsIgnoreCase("Alamat Pengiriman"));
 	checkoutPage.chooseShipOpt();
+	
+	//PaymentPage
+	checkoutPage.goToPaymentPage();
+	PaymentPage paymentPage = new PaymentPage(driver);
+	String payMethodString = paymentPage.verifyPaymentPage();
+	Assert.assertTrue(payMethodString.equalsIgnoreCase("Metode Pembayaran"));
+	
 	
 	}
 	
