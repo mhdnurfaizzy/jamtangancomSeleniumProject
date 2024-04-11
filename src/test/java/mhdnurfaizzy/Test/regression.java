@@ -64,6 +64,7 @@ public class regression extends baseTesting{
 	PaymentPage paymentPage = new PaymentPage(driver);
 	String payMethodString = paymentPage.verifyPaymentPage();
 	Assert.assertTrue(payMethodString.equalsIgnoreCase("Metode Pembayaran"));
+	paymentPage.methodVA();
 	
 	
 	}
