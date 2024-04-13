@@ -8,6 +8,7 @@ import mhdnurfaizzy.pageobjects.CartPage;
 import mhdnurfaizzy.pageobjects.CheckoutPage;
 import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.LoginPage;
+import mhdnurfaizzy.pageobjects.PaymentDetailsPage;
 import mhdnurfaizzy.pageobjects.PaymentPage;
 import mhdnurfaizzy.pageobjects.ProductPage;
 import mhdnurfaizzy.pageobjects.SearchPage;
@@ -66,6 +67,10 @@ public class regression extends baseTesting{
 	Assert.assertTrue(payMethodString.equalsIgnoreCase("Metode Pembayaran"));
 	paymentPage.methodVA();
 	
+	//ThankYouPage
+	paymentPage.orderNow();
+	PaymentDetailsPage payDetails = new PaymentDetailsPage(driver);
+	System.out.println(payDetails.noVA());
 	
 	}
 	

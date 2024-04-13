@@ -24,7 +24,8 @@ WebDriver driver;
 	WebElement virtualAccount;
 	@FindBy(css=".ic-check.text-xxs.text-neutral-1000.absolute.top-0.right-0")
 	WebElement selectedMethod;
-	
+	@FindBy(css=".mw-ripple-effect.btn.rounded.text-sm.relative.overflow-hidden.w-full.btn-filled.text-neutral-1000.bg-primary-1.uppercase")
+	WebElement orderNow;
 	
 	public String verifyPaymentPage() {
 		waitWebElementForAppear(paymentMethod);
@@ -36,6 +37,13 @@ WebDriver driver;
 		virtualAccount.click();
 		waitWebElementForAppear(selectedMethod);
 		selectedMethod.isDisplayed();
+	}
+	
+	public PaymentDetailsPage orderNow() {
+		waitWebElementForAppear(orderNow);
+		orderNow.isEnabled();
+		orderNow.click();
+		return new PaymentDetailsPage(driver);
 	}
 
 }
