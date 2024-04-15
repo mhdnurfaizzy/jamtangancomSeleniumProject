@@ -71,7 +71,9 @@ public class regression extends baseTesting{
 	paymentPage.orderNow();
 	PaymentDetailsPage payDetails = new PaymentDetailsPage(driver);
 	System.out.println(payDetails.noVA());
-	
+
+
+	//Test
 	}
 	
 }
