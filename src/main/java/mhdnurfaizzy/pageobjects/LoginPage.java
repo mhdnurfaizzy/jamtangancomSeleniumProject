@@ -28,6 +28,9 @@ public class LoginPage extends abstractComponent{
 	
 	@FindBy(css=".mw-ripple-effect.btn.rounded.text-sm.relative.overflow-hidden.w-full.btn-filled.text-neutral-1000.bg-primary-1.uppercase.qa-login-button")
 	 WebElement submit;
+
+	@FindBy(css=".message.text-xs.leading-normal.font-bold")
+	WebElement errMessageLogin;
 	
 	public void goTo()
 	{
@@ -40,7 +43,21 @@ public class LoginPage extends abstractComponent{
 		passwordEle.sendKeys("Apaiya01-");
 		submit.isEnabled();
 		submit.click();
-	
+
 	}
+	public void invalidLogin() {
+		useremail.sendKeys("mhdnurfaizzy@gmail.com");
+		passwordEle.isDisplayed();
+		passwordEle.sendKeys("Apaiya01");
+		submit.isEnabled();
+		submit.click();
+
+	}
+
+	public String errMessage() {
+		waitWebElementForAppear(errMessageLogin);
+		return errMessageLogin.getText();
+	}
+
 
 }
