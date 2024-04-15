@@ -43,6 +43,7 @@ public class baseTest {
 		if(browserName.contains("edge")) {
 			EdgeOptions Options = new EdgeOptions();
 			WebDriverManager.edgedriver().setup();
+			
 			if(browserName.contains("headless")) {
 				Options.addArguments("headless");
 			}
