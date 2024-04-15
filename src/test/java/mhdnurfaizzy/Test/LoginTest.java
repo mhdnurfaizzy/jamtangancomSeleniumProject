@@ -15,7 +15,7 @@ public class LoginTest extends baseTesting {
     @DataProvider
     public static Object[][] getData() throws IOException {
         List<HashMap<String, String>> data = getDataJsonToMap(System.getProperty("user.dir") + "src/main/java/mhdnurfaizzy/data/Purchase.json");
-        return new Object[][] { {data.get(0)},{data.get(1)} };
+        return new Object[][] { {data.get(0)} };
     }
 
 

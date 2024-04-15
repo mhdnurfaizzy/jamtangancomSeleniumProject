@@ -17,6 +17,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -34,7 +35,7 @@ public class baseTesting {
 	public WebDriver Inittialized() throws IOException {
 		
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\mhdnurfaizzy\\resource\\globalData.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/mhdnurfaizzy/resource/globalData.properties");
 		prop.load(fis);
 		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
 //		String browserName = prop.getProperty("browser");
@@ -42,7 +43,7 @@ public class baseTesting {
 		if(browserName.contains("edge")) {
 			EdgeOptions Options = new EdgeOptions();
 			WebDriverManager.edgedriver().setup();
-			Options.addArguments("--headless=new");
+//			Options.addArguments("--headless=new");
 			if(browserName.contains("headless")) {
 				Options.addArguments("headless");
 			}
@@ -52,7 +53,11 @@ public class baseTesting {
 		} else if(browserName.equalsIgnoreCase("chrome"))
 			{
 			//ChromeDriver
-			driver = new ChromeDriver();
+				ChromeOptions Options = new ChromeOptions();
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				driver = new ChromeDriver(Options);
+				driver.manage().window().setSize(new Dimension(1440,990)); //full screen
 
 			} else if(browserName.equalsIgnoreCase("firefox"))
 				{
@@ -67,7 +72,7 @@ public class baseTesting {
 
 	public static List<HashMap<String, String>> getDataJsonToMap(String filePath) throws IOException {
 		//read JSON to String
-		String jsonContent = FileUtils.readFileToString(new File(System.getProperty("user.dir") + "\\src\\main\\java\\mhdnurfaizzy\\data\\Purchase.json"), StandardCharsets.UTF_8);
+		String jsonContent = FileUtils.readFileToString(new File(System.getProperty("user.dir") + "/src/main/java/mhdnurfaizzy/data/Purchase.json"), StandardCharsets.UTF_8);
 
 		ObjectMapper mapper = new ObjectMapper();
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>() {
@@ -95,11 +100,11 @@ public class baseTesting {
 		 
 	}
 	
-//	@AfterMethod(alwaysRun= true)
-//	public void endTest()
-//	{
-//		driver.quit();
-//	}
+	@AfterMethod(alwaysRun= true)
+	public void endTest()
+	{
+		driver.quit();
+	}
 	
 	
 	
