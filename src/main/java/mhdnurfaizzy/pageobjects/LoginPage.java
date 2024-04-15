@@ -37,18 +37,18 @@ public class LoginPage extends abstractComponent{
 		driver.get("https://www.jamtangan.com/login");
 	}
 	
-	public void loginApplication() {
-		useremail.sendKeys("mhdnurfaizzy@gmail.com");
+	public void loginApplication(String email, String password) {
+		useremail.sendKeys(email);
 		passwordEle.isDisplayed();
-		passwordEle.sendKeys("Apaiya01-");
+		passwordEle.sendKeys(password);
 		submit.isEnabled();
 		submit.click();
 
 	}
-	public void invalidLogin() {
-		useremail.sendKeys("mhdnurfaizzy@gmail.com");
+	public void invalidLogin(String email, String password) {
+		useremail.sendKeys(email);
 		passwordEle.isDisplayed();
-		passwordEle.sendKeys("Apaiya01");
+		passwordEle.sendKeys(password);
 		submit.isEnabled();
 		submit.click();
 

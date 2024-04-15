@@ -3,23 +3,38 @@ package mhdnurfaizzy.Test;
 import mhdnurfaizzy.pageobjects.LoginPage;
 import mhdnurfaizzy.testComponent.baseTesting;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
 
 public class LoginTest extends baseTesting {
 
-    @Test
-    public void validLogin() {
+    @DataProvider
+    public static Object[][] getData() throws IOException {
+        List<HashMap<String, String>> data = getDataJsonToMap(System.getProperty("user.dir") + "src/main/java/mhdnurfaizzy/data/Purchase.json");
+        return new Object[][] { {data.get(0)},{data.get(1)} };
+    }
+
+
+    @Test(dataProvider= "getData")
+    public void validLogin(HashMap<String, String> input) {
         //Login
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginApplication();
+        loginPage.loginApplication(input.get("email"), input.get("password"));
     }
 
     @Test
     public void invalidLogin() {
         //Login
-        loginPage.invalidLogin();
+        loginPage.invalidLogin("mhdnurfaizzy@gmail.com", "Testing890-");
         String errorMessage = loginPage.errMessage();
         Assert.assertTrue(errorMessage.equalsIgnoreCase("Ups, email atau password kamu salah"));
 
     }
+
+
+
 }

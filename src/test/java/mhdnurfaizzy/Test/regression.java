@@ -19,8 +19,8 @@ public class regression extends baseTesting{
 	@Test
 	public void Regression() {
 	//Login
-	LoginPage loginPage = new LoginPage(driver);
-	loginPage.loginApplication();
+//	LoginPage loginPage = new LoginPage(driver);
+//	loginPage.loginApplication();
 	
 	//Home Page
 	HomePage homePage = new HomePage(driver);
