@@ -25,6 +25,10 @@ public class SearchPage extends abstractComponent{
 		 WebElement searchIcon;
 		@FindBy(css="div[class='text-primary-1 font-black text-sm']")
 		 WebElement getProdukTerkaitText;
+		@FindBy(css="span[class='text-primary-1 font-black text-sm']")
+		WebElement getRecommendedProductText;
+		@FindBy(css="div[class='text-primary-1 font-black text-sm px-4 md:px-0']")
+		WebElement getBrandsText;
 		@FindBy(css=".ic-close.text-2xl")
 		 WebElement clearArea;
 		@FindBy(xpath="(//div[@class='product-card relative'])[1]")
@@ -37,15 +41,31 @@ public class SearchPage extends abstractComponent{
 		searchIcon.click();
 	}
 	
-	public String verifyProductTerkait() {
+	public String srcBarProductTerkait() {
 		searchBar.sendKeys("casio");
 		waitWebElementForAppear(getProdukTerkaitText);
 		return getProdukTerkaitText.getText();
+	}
+
+	public String srcBarRecommendedProduct() {
+		searchBar.sendKeys("casio");
+		waitWebElementForAppear(getRecommendedProductText);
+		return getRecommendedProductText.getText();
+	}
+
+	public String srcBarBrands() {
+		searchBar.sendKeys("casio");
+		waitWebElementForAppear(getBrandsText);
+		return getBrandsText.getText();
 	}
 	
 	public void goToFirstProduct() {
 		waitWebElementForAppear(firstProduct);
 		firstProduct.click();
+	}
+
+	public void clearSearch() {
+		clearArea.click();
 	}
 
 }
