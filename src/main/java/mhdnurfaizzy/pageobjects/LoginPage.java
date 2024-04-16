@@ -31,6 +31,7 @@ public class LoginPage extends abstractComponent{
 
 	@FindBy(css=".message.text-xs.leading-normal.font-bold")
 	WebElement errMessageLogin;
+
 	
 	public void goTo()
 	{
@@ -54,10 +55,27 @@ public class LoginPage extends abstractComponent{
 
 	}
 
-	public String errMessage() {
+	public void invalidEmail(String email, String password) {
+		useremail.sendKeys(email);
+		passwordEle.isDisplayed();
+		passwordEle.sendKeys(password);
+		submit.isEnabled();
+		submit.click();
+	}
+
+	public String errMessageWrongPass() {
 		waitWebElementForAppear(errMessageLogin);
 		return errMessageLogin.getText();
 	}
+
+	public String errMessageWrongEmail() {
+		waitWebElementForAppear(errMessageLogin);
+		return errMessageLogin.getText();
+	}
+
+
+
+
 
 
 }

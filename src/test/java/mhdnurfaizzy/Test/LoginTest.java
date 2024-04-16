@@ -30,11 +30,17 @@ public class LoginTest extends baseTesting {
     public void invalidLogin() {
         //Login
         loginPage.invalidLogin("mhdnurfaizzy@gmail.com", "Testing890-");
-        String errorMessage = loginPage.errMessage();
+        String errorMessage = loginPage.errMessageWrongPass();
         Assert.assertTrue(errorMessage.equalsIgnoreCase("Ups, email atau password kamu salah"));
-
     }
 
+    @Test
+    public void invalidEmailLogin() {
+        //Login
+        loginPage.invalidEmail("mhdnurfaizi@gmail.com", "Testing890-");
+        String errorMessage = loginPage.errMessageWrongPass();
+        Assert.assertTrue(errorMessage.equalsIgnoreCase("Ups, akun ini belum terdaftar"));
+    }
 
 
 }

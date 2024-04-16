@@ -55,7 +55,7 @@ public class baseTesting {
 			//ChromeDriver
 				ChromeOptions Options = new ChromeOptions();
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+//				driver = new ChromeDriver();
 				driver = new ChromeDriver(Options);
 				driver.manage().window().setSize(new Dimension(1440,990)); //full screen
 
