@@ -60,12 +60,7 @@ public class abstractComponent {
 		CartPage cartPage = new CartPage(driver);
 		return cartPage;
 	}
-	
-	public OrderPage goToOrderPage() {
-		orderHeader.click();
-		OrderPage orderPage = new OrderPage(driver);
-		return orderPage;
-	}
+
 	
 	public HomePage alertNotif() {
 		waitWebElementForAppear(notif);
