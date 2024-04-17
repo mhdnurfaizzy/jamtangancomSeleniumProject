@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import mhdnurfaizzy.pageobjects.CartPage;
 import mhdnurfaizzy.pageobjects.HomePage;
-import mhdnurfaizzy.pageobjects.OrderPage;
 
 public class abstractComponent {
 	
