@@ -29,7 +29,7 @@ public class SearchPage extends abstractComponent{
 		WebElement getRecommendedProductText;
 		@FindBy(css="div[class='text-primary-1 font-black text-sm px-4 md:px-0']")
 		WebElement getBrandsText;
-		@FindBy(css=".ic-close.text-2xl")
+		@FindBy(css="#reset-search")
 		 WebElement clearArea;
 		@FindBy(xpath="(//div[@class='product-card relative'])[1]")
 		 WebElement firstProduct;
@@ -65,6 +65,7 @@ public class SearchPage extends abstractComponent{
 	}
 
 	public void clearSearch() {
+		waitWebElementForAppear(clearArea);
 		clearArea.click();
 	}
 
