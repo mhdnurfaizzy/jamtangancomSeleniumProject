@@ -16,6 +16,25 @@ public class HomePage extends abstractComponent{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+
+	public void popUpAfterlogin() {
+		try
+		{
+			// Some code
+			alertNotif();
+		}
+		catch(Exception e)
+		{
+			// Code for Handling the exception
+			System.out.println("Notification Pop up not shown");
+		}
+		try {
+			popUpAds();
+		}  catch(Exception e1)
+		{
+			System.out.println("Pop up Ads not shown");
+		}
+	}
 	
 
 }

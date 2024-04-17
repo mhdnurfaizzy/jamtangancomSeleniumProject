@@ -29,22 +29,7 @@ public class SearchTest extends baseTesting {
 
         //home page
         HomePage homePage = new HomePage(driver);
-        try
-        {
-            // Some code
-            homePage.alertNotif();
-        }
-        catch(Exception e)
-        {
-            // Code for Handling the exception
-            System.out.println("Notification Pop up not shown");
-        }
-        try {
-            homePage.popUpAds();
-        }  catch(Exception e1)
-            {
-                System.out.println("Pop up Ads not shown");
-            }
+        homePage.popUpAfterlogin();
 
         //Search
         SearchPage searchPage = new SearchPage(driver);

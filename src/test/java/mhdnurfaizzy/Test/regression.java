@@ -24,17 +24,7 @@ public class regression extends baseTesting{
 	
 	//Home Page
 	HomePage homePage = new HomePage(driver);
-	try
-	   {
-	     // Some code
-		homePage.alertNotif();
-	   }
-	catch(Exception e)
-	  {
-	     // Code for Handling the exception
-		System.out.println("Notif Pop up not shown");
-	  }
-	homePage.popUpAds();
+	homePage.popUpAfterlogin();
 	
 	//Search Feature
 	SearchPage searchPage = new SearchPage(driver);
