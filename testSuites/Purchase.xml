@@ -3,20 +3,26 @@
 <suite parallel="tests" name="Suite">
 	<groups>
 		<run>
-			<include name="Purchase"/>
+			<include name="Regression"/>
 		</run>
 	</groups>
-  <test thread-count="5" name="Submit Order Test">
+
+    <listeners>
+        <listener class-name="mhdnurfaizzy.testComponent.Listeners"/>
+    </listeners>
+
+  <test thread-count="5" name="Login Test">
     <classes>
-      <class name="mhdnurfaizzy.Test.e2eTest"/>
+      <class name="mhdnurfaizzy.Test.LoginTest"/>
     </classes>
   </test> <!-- Test -->
   
-   <test thread-count="5" name="Error Validations Test">
+   <test thread-count="5" name="SearchProduct Test">
     <classes>
-      <class name="mhdnurfaizzy.Test.errorValidationsTest"/>
+      <class name="mhdnurfaizzy.Test.SearchTest"/>
     </classes>
-  </test> <!-- Test -->
+  </test>
+<!--     Test-->
   
 </suite> <!-- Suite -->
 

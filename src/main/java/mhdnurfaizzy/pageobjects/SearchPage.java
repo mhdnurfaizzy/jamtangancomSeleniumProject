@@ -42,6 +42,7 @@ public class SearchPage extends abstractComponent{
 	}
 	
 	public String srcBarProductTerkait() {
+		waitWebElementForAppear(searchBar);
 		searchBar.sendKeys("casio");
 		waitWebElementForAppear(getProdukTerkaitText);
 		return getProdukTerkaitText.getText();
