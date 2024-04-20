@@ -7,7 +7,7 @@ This project aims to automate the web UI testing of jamtangan.com using Selenium
 ## Installation
 To set up the project locally, follow these steps:
 
-1. Clone the repository from GitHub: `git clone [<repository_url>](https://github.com/mhdnurfaizzy/jamtangancomSeleniumProject/)`
+1. Clone the repository from GitHub: `git clone https://github.com/mhdnurfaizzy/jamtangancomSeleniumProject/`
 2. Navigate to the project directory: `cd [name-project]`
 3. Install dependencies using Maven: `mvn clean install`
 
@@ -33,6 +33,7 @@ Refer to the [Test Case Spreadsheet](https://docs.google.com/spreadsheets/d/1J9A
 
 ### Video Demonstration
 You can watch video demonstrations of the tests running:
+- [Regression](#)
 - [Login Test Video](#)
 - [Search Product Test Video](#)
 - [Checkout Process Test Video](#)
