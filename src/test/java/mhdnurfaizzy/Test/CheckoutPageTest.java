@@ -1,9 +1,11 @@
 package mhdnurfaizzy.Test;
 
 import mhdnurfaizzy.pageobjects.CartPage;
+import mhdnurfaizzy.pageobjects.CheckoutPage;
 import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.LoginPage;
 import mhdnurfaizzy.testComponent.baseTesting;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -11,7 +13,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-public class CartPageTest extends baseTesting {
+public class CheckoutPageTest  extends baseTesting {
+
 
     @DataProvider
     public static Object[][] getData() throws IOException {
@@ -20,7 +23,7 @@ public class CartPageTest extends baseTesting {
     }
 
     @Test(dataProvider= "getData",groups= {"Regression"})
-    public void goToCartPage(HashMap<String, String> input) {
+    public void CheckOutPageTest(HashMap<String, String> input) {
         //Login
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginApplication(input.get("email"), input.get("password"));
@@ -37,6 +40,13 @@ public class CartPageTest extends baseTesting {
 
         //GoToCheckOutPage
         cartPage.goToCheckout();
-    }
 
+        //CheckoutPage
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        String shipAddress = checkoutPage.address();
+        Assert.assertTrue(shipAddress.equalsIgnoreCase("Alamat Pengiriman"));
+        checkoutPage.chooseShipOpt();
+
+
+    }
 }
