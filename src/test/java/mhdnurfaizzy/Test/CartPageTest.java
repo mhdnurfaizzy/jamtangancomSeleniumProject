@@ -33,6 +33,7 @@ public class CartPageTest extends baseTesting {
         CartPage cartPage = new CartPage(driver);
         cartPage.goToCartPage();
         cartPage.verifyProductTitleDisplayed();
+        cartPage.countAvailableProduct();
     }
 
 }
