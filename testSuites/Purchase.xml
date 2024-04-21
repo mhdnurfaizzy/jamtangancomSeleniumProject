@@ -41,6 +41,12 @@
         </classes>
     </test>
 
+    <test thread-count="5" name="PaymentPage Test">
+        <classes>
+            <class name="mhdnurfaizzy.Test.PaymentPageTest"/>
+        </classes>
+    </test>
+
 
 <!--     Test-->
   
