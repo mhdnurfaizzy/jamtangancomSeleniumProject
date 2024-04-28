@@ -1,5 +1,6 @@
 package mhdnurfaizzy.Test;
 
+import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.LoginPage;
 import mhdnurfaizzy.testComponent.baseTesting;
 import org.testng.Assert;

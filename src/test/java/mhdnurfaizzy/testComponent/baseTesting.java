@@ -11,6 +11,7 @@ import java.util.Properties;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mhdnurfaizzy.Test.LoginTest;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -96,6 +97,7 @@ public class baseTesting {
 		 driver = Inittialized();
 		 loginPage = new LoginPage(driver);
 		 loginPage.goTo();
+		 loginPage.loginApplication("mhdnurfaizzy@gmail.com", "Apaiya01-");
 		 return loginPage;
 		 
 	}
