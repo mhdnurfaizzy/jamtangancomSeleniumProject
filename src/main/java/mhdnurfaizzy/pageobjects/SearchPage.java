@@ -31,7 +31,7 @@ public class SearchPage extends abstractComponent{
 		WebElement getBrandsText;
 		@FindBy(css="#reset-search")
 		 WebElement clearArea;
-		@FindBy(xpath="(//div[@class='product-card relative'])[1]")
+		@FindBy(xpath="(//div[@class='relative px-2.5 pt-9 md:pt-8 md:px-4'])[1]")
 		 WebElement firstProduct;
 		
 		

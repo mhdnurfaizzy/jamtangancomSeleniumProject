@@ -11,13 +11,12 @@
         <listener class-name="mhdnurfaizzy.testComponent.Listeners"/>
     </listeners>
 
-  <test thread-count="5" name="Login Test">
-    <classes>
-      <class name="mhdnurfaizzy.Test.LoginTest"/>
-    </classes>
-  </test> <!-- Test -->
-  
-   <test thread-count="5" name="SearchProduct Test">
+<!--  <test thread-count="5" name="Login Test">-->
+<!--    <classes>-->
+<!--      <class name="mhdnurfaizzy.Test.LoginTest"/>-->
+<!--    </classes>-->
+<!--  </test> &lt;!&ndash; Test &ndash;&gt;-->
+    <test thread-count="5" name="SearchProduct Test">
     <classes>
       <class name="mhdnurfaizzy.Test.SearchTest"/>
     </classes>

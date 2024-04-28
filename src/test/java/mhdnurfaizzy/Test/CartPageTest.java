@@ -13,7 +13,7 @@ import java.util.List;
 
 public class CartPageTest extends baseTesting {
 
-    @Test()
+    @Test(groups= {"Regression"})
     public void goToCartPage() {
         //home page
         HomePage homePage = new HomePage(driver);
