@@ -33,16 +33,10 @@ Refer to the [Test Case Spreadsheet](https://docs.google.com/spreadsheets/d/1J9A
 
 ### Video Demonstration
 You can watch video demonstrations of the tests running:
-- [Regression](#)
-- [Login Test Video](#)
+- [Regression](https://drive.google.com/file/d/1aJLZZXz3Qy3AfVpTYImGYEQqTdxci2Gh/view?usp=sharing)
+- [Login Test Video](https://drive.google.com/file/d/1VL60UPssUJnkxMih6aumMfue3Igmuo6Y/view?usp=sharing)
 - [Search Product Test Video](#)
 - [Checkout Process Test Video](#)
-
-## Contributing
-We welcome contributions to improve this project. If you'd like to contribute, please follow these guidelines:
-- Fork the repository and create a new branch for your feature or bug fix.
-- Make your changes and ensure all tests pass.
-- Submit a pull request with a clear description of your changes.
 
 
 ## Contact
