@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class CartPageTest extends baseTesting {
+//    CartPage cartPage = new CartPage(driver);
 
     @Test(groups= {"Regression"})
     public void goToCartPage() {
@@ -27,6 +28,26 @@ public class CartPageTest extends baseTesting {
 
         //GoToCheckOutPage
         cartPage.goToCheckout();
+    }
+
+    @Test
+    public void wishlistProductOnCart() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        cartPage.wishlist();
+    }
+
+    @Test
+    public void addQty() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        cartPage.addQty();
     }
 
 }
