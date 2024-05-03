@@ -26,6 +26,8 @@ public class CartPage extends abstractComponent{
 	WebElement unWishlist;
 	@FindBy(css=".ic-plus.text-neutral-300")
 	WebElement plusQty;
+	@FindBy(css=".ic-minus.text-neutral-300")
+	WebElement minQty;
 
 
 
@@ -65,7 +67,23 @@ public class CartPage extends abstractComponent{
 	}
 
 	public void addQty() {
+		waitWebElementForAppear(minQtyDissable);
 		waitWebElementForAppear(plusQty);
 		plusQty.click();
+	}
+
+	public void minQty() {
+		try {
+			minQty.click();
+			System.out.println("button min qty dissable, try add qty");
+		} catch (Exception e) {
+			plusQty.click();
+			System.out.println("try add 1 qty");
+			minQty.click();
+			System.out.println("Success min 1 qty");
+		}
+
+
+
 	}
 }

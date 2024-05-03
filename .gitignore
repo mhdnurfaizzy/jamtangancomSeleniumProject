@@ -2,3 +2,5 @@
 /target/
 baseTesting.java
 Purchase.json
+/reports/
+/.idea/

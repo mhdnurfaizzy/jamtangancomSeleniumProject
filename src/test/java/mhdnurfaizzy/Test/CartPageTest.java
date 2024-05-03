@@ -50,4 +50,14 @@ public class CartPageTest extends baseTesting {
         cartPage.addQty();
     }
 
+    @Test
+    public void minQty() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        cartPage.minQty();
+    }
+
 }

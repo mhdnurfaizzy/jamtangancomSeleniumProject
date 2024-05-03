@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="746b6680-4909-4b30-bca9-b0f2f6b0d62b" name="Changes" comment="fixing testsuite">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mhdnurfaizzy/pageobjects/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mhdnurfaizzy/pageobjects/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mhdnurfaizzy/Test/CartPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mhdnurfaizzy/Test/CartPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG./Users/mac/IdeaProjects/jamtangancomSeleniumProject/testSuites/Purchase.xml.executor": "Run",
     "TestNG./Users/mac/IdeaProjects/jamtangancomSeleniumProject/testSuites/Regression.xml.executor": "Run",
+    "TestNG.CartPageTest.addQty.executor": "Run",
     "TestNG.CartPageTest.executor": "Run",
+    "TestNG.CartPageTest.minQty.executor": "Run",
     "TestNG.CheckoutPageTest.executor": "Run",
     "TestNG.LoginTest.executor": "Run",
     "TestNG.LoginTest.testLogin.executor": "Run",
@@ -60,11 +64,47 @@
     "TestNG.ProductTest.executor": "Run",
     "TestNG.SearchTest.executor": "Run",
     "TestNG.regression.executor": "Run",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTest.testLogin">
+  <component name="RunManager" selected="TestNG.CartPageTest.minQty">
+    <configuration name="CartPageTest.addQty" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="seleniumFrameworkDesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mhdnurfaizzy.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mhdnurfaizzy.Test" />
+      <option name="MAIN_CLASS_NAME" value="mhdnurfaizzy.Test.CartPageTest" />
+      <option name="METHOD_NAME" value="addQty" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartPageTest.minQty" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="seleniumFrameworkDesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mhdnurfaizzy.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mhdnurfaizzy.Test" />
+      <option name="MAIN_CLASS_NAME" value="mhdnurfaizzy.Test.CartPageTest" />
+      <option name="METHOD_NAME" value="minQty" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTest.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="seleniumFrameworkDesign" />
       <extension name="coverage">
@@ -121,6 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CartPageTest.minQty" />
+        <item itemvalue="TestNG.CartPageTest.addQty" />
         <item itemvalue="TestNG.ProductTest.addProductToCart" />
         <item itemvalue="TestNG.LoginTest.validLogin" />
         <item itemvalue="TestNG.LoginTest.testLogin" />
