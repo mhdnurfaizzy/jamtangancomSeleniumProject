@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import mhdnurfaizzy.AbstractComponenet.abstractComponent;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CartPage extends abstractComponent{
 	
@@ -30,6 +29,8 @@ public class CartPage extends abstractComponent{
 	WebElement minQty;
 	@FindBy(css="div[class='text-sm md:text-xl font-black']")
 	WebElement totalBelanja;
+	@FindBy(css="div[class='text-sm md:text-xl font-black']")
+	WebElement totalHarga;
 
 
 
@@ -86,9 +87,15 @@ public class CartPage extends abstractComponent{
 		}
 	}
 
-	public void setTotalBelanja() {
-			String total = totalBelanja.getText();
-			System.out.println("Total Belanja = " + total);
+	public String setTotalBelanja() {
+			String totalBelancaCart = totalBelanja.getText();
+//			System.out.println("Total Belanja = " + totalBelancaCart);
+			return totalBelancaCart;
+	}
+
+	public String setTotalHarga() {
+		String totalHargaOnCart = totalHarga.getText();
+		return totalHargaOnCart;
 	}
 
 
