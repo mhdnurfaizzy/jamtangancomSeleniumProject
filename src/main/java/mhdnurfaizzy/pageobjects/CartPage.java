@@ -28,6 +28,8 @@ public class CartPage extends abstractComponent{
 	WebElement plusQty;
 	@FindBy(css=".ic-minus.text-neutral-300")
 	WebElement minQty;
+	@FindBy(css="div[class='text-sm md:text-xl font-black']")
+	WebElement totalBelanja;
 
 
 
@@ -67,7 +69,7 @@ public class CartPage extends abstractComponent{
 	}
 
 	public void addQty() {
-		waitWebElementForAppear(minQtyDissable);
+		waitWebElementForAppear(minQty);
 		waitWebElementForAppear(plusQty);
 		plusQty.click();
 	}
@@ -82,8 +84,12 @@ public class CartPage extends abstractComponent{
 			minQty.click();
 			System.out.println("Success min 1 qty");
 		}
-
-
-
 	}
+
+	public void setTotalBelanja() {
+			String total = totalBelanja.getText();
+			System.out.println("Total Belanja = " + total);
+	}
+
+
 }

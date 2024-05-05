@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="746b6680-4909-4b30-bca9-b0f2f6b0d62b" name="Changes" comment="fixing testsuite">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mhdnurfaizzy/pageobjects/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mhdnurfaizzy/pageobjects/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mhdnurfaizzy/Test/CartPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mhdnurfaizzy/Test/CartPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mhdnurfaizzy/Test/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mhdnurfaizzy/Test/SearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,29 +46,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG./Users/mac/IdeaProjects/jamtangancomSeleniumProject/testSuites/Purchase.xml.executor": "Run",
-    "TestNG./Users/mac/IdeaProjects/jamtangancomSeleniumProject/testSuites/Regression.xml.executor": "Run",
-    "TestNG.CartPageTest.addQty.executor": "Run",
-    "TestNG.CartPageTest.executor": "Run",
-    "TestNG.CartPageTest.minQty.executor": "Run",
-    "TestNG.CheckoutPageTest.executor": "Run",
-    "TestNG.LoginTest.executor": "Run",
-    "TestNG.LoginTest.testLogin.executor": "Run",
-    "TestNG.LoginTest.validLogin.executor": "Run",
-    "TestNG.PaymentPageTest.executor": "Run",
-    "TestNG.ProductTest.addProductToCart.executor": "Run",
-    "TestNG.ProductTest.executor": "Run",
-    "TestNG.SearchTest.executor": "Run",
-    "TestNG.regression.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG./Users/mac/IdeaProjects/jamtangancomSeleniumProject/testSuites/Purchase.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG./Users/mac/IdeaProjects/jamtangancomSeleniumProject/testSuites/Regression.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CartPageTest.addQty.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CartPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CartPageTest.minQty.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CheckoutPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLogin.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.validLogin.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PaymentPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductTest.addProductToCart.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.regression.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="TestNG.CartPageTest.minQty">
+}</component>
+  <component name="RunManager" selected="TestNG.CartPageTest.checkTotalBelanja">
     <configuration name="CartPageTest.addQty" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="seleniumFrameworkDesign" />
       <extension name="coverage">
@@ -87,6 +87,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CartPageTest.checkTotalBelanja" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="seleniumFrameworkDesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mhdnurfaizzy.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mhdnurfaizzy.Test" />
+      <option name="MAIN_CLASS_NAME" value="mhdnurfaizzy.Test.CartPageTest" />
+      <option name="METHOD_NAME" value="checkTotalBelanja" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CartPageTest.minQty" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="seleniumFrameworkDesign" />
       <extension name="coverage">
@@ -98,24 +116,6 @@
       <option name="PACKAGE_NAME" value="mhdnurfaizzy.Test" />
       <option name="MAIN_CLASS_NAME" value="mhdnurfaizzy.Test.CartPageTest" />
       <option name="METHOD_NAME" value="minQty" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="seleniumFrameworkDesign" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mhdnurfaizzy.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mhdnurfaizzy.Test" />
-      <option name="MAIN_CLASS_NAME" value="mhdnurfaizzy.Test.LoginTest" />
-      <option name="METHOD_NAME" value="testLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -161,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CartPageTest.checkTotalBelanja" />
         <item itemvalue="TestNG.CartPageTest.minQty" />
         <item itemvalue="TestNG.CartPageTest.addQty" />
         <item itemvalue="TestNG.ProductTest.addProductToCart" />
         <item itemvalue="TestNG.LoginTest.validLogin" />
-        <item itemvalue="TestNG.LoginTest.testLogin" />
       </list>
     </recent_temporary>
   </component>

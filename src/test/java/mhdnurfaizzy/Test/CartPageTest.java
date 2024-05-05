@@ -60,4 +60,14 @@ public class CartPageTest extends baseTesting {
         cartPage.minQty();
     }
 
+    @Test
+    public void checkTotalBelanja() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        cartPage.setTotalBelanja();
+    }
+
 }
