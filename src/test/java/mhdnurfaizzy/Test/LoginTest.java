@@ -20,7 +20,7 @@ public class LoginTest extends baseTesting {
     }
 
 
-    @Test(dataProvider= "getData",groups= {"Regression"})
+    @Test(dataProvider= "getData")
     public void validLogin(HashMap<String, String> input) {
         //Login
         LoginPage loginPage = new LoginPage(driver);

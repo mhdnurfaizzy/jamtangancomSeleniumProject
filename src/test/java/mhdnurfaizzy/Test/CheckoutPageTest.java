@@ -15,7 +15,7 @@ import java.util.List;
 
 public class CheckoutPageTest  extends baseTesting {
 
-    @Test()
+    @Test(groups= {"Regression"})
     public void CheckOutPageTest() {
         //home page
         HomePage homePage = new HomePage(driver);

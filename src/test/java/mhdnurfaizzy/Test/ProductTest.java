@@ -15,7 +15,7 @@ import java.util.List;
 public class ProductTest extends baseTesting {
 
 
-    @Test()
+    @Test(groups= {"Regression"})
     public void addProductToCart() {
         //home page
         HomePage homePage = new HomePage(driver);

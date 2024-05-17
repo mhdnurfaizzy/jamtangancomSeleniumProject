@@ -4,6 +4,7 @@ import mhdnurfaizzy.pageobjects.CartPage;
 import mhdnurfaizzy.pageobjects.HomePage;
 import mhdnurfaizzy.pageobjects.LoginPage;
 import mhdnurfaizzy.testComponent.baseTesting;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -12,8 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class CartPageTest extends baseTesting {
+//    CartPage cartPage = new CartPage(driver);
 
-    @Test()
+    @Test(groups= {"Regression"})
     public void goToCartPage() {
         //home page
         HomePage homePage = new HomePage(driver);
@@ -27,6 +29,59 @@ public class CartPageTest extends baseTesting {
 
         //GoToCheckOutPage
         cartPage.goToCheckout();
+    }
+
+    @Test
+    public void wishlistProductOnCart() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        cartPage.wishlist();
+    }
+
+    @Test
+    public void addQty() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        cartPage.addQty();
+    }
+
+    @Test
+    public void minQty() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        cartPage.minQty();
+    }
+
+    @Test
+    public void checkTotalBelanja() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        cartPage.setTotalBelanja();
+    }
+
+    @Test
+    public void verifyTotalBelanjaAndTotalHargaMatch() {
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+        String totalHarga = cartPage.setTotalHarga();
+        String totalBelanja = cartPage.setTotalBelanja();
+        Assert.assertTrue(totalBelanja.equalsIgnoreCase(totalHarga));
+        
     }
 
 }

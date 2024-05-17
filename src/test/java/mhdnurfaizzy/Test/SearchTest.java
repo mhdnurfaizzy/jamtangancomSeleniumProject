@@ -25,8 +25,6 @@ public class SearchTest extends baseTesting {
         //Search
         SearchPage searchPage = new SearchPage(driver);
         searchPage.searchProduct();
-
-
     }
 
     //Section Search Bar - RelatedProduct, RecommendedProduct, BrandsProduct

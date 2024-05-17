@@ -16,7 +16,7 @@ import mhdnurfaizzy.testComponent.baseTesting;
 
 public class regression extends baseTesting{
 	
-	@Test
+	@Test(groups = "Regression")
 	public void Regression() {
 	//Login
 //	LoginPage loginPage = new LoginPage(driver);
@@ -29,7 +29,7 @@ public class regression extends baseTesting{
 	//Search Feature
 	SearchPage searchPage = new SearchPage(driver);
 	searchPage.searchProduct();
-	homePage.popUpAds();
+//	homePage.popUpAds();
 	searchPage.goToFirstProduct();
 	
 	//ProductPage
