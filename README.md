@@ -11,6 +11,15 @@ To set up the project locally, follow these steps:
 2. Navigate to the project directory: `cd [name-project]`
 3. Install dependencies using Maven: `mvn clean install`
 
+## Setup Credential Login
+1. Add new file `Purchase.json` at folder main/../data and use format `[
+{
+"email" : "your_email",
+"password" : "your_password"
+}
+]`
+2. At folder `test/../testComponent/` file `baseTesting.java` uncoment line 101 and put your credential login
+
 ## Usage
 To run the automation tests, follow these steps:
 
