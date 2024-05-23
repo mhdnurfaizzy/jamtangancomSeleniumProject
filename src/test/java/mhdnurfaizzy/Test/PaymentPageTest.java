@@ -13,7 +13,7 @@ import java.util.List;
 public class PaymentPageTest extends baseTesting {
 
     @Test(groups= {"Regression"})
-    public void CheckOutPageTest() {
+    public void PaymentPageTest() {
         //home page
         HomePage homePage = new HomePage(driver);
         homePage.popUpAfterlogin();
