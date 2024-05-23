@@ -14,9 +14,9 @@ import mhdnurfaizzy.pageobjects.ProductPage;
 import mhdnurfaizzy.pageobjects.SearchPage;
 import mhdnurfaizzy.testComponent.baseTesting;
 
-public class regression extends baseTesting{
+public class e2ePurchase extends baseTesting{
 	
-	@Test(groups = "Regression")
+	@Test()
 	public void Regression() {
 	//Login
 //	LoginPage loginPage = new LoginPage(driver);

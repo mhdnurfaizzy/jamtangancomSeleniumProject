@@ -1,14 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Test-Suite Regression" >
+<suite name="Test-Suite e2e Purchase" >
 
 
     <listeners>
         <listener class-name="mhdnurfaizzy.testComponent.Listeners"/>
     </listeners>
 
-    <test name="Reggression" >
+    <test name="e2e Purchase" >
         <classes>
-            <class name="mhdnurfaizzy.Test.regression" />
+            <class name="mhdnurfaizzy.Test.e2ePurchase" />
         </classes>
     </test>
 
