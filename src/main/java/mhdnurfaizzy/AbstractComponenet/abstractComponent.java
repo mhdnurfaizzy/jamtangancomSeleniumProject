@@ -16,7 +16,7 @@ public class abstractComponent {
 	
 	WebDriver driver;
 	
-	@FindBy(css=".ic-cart.mt-2.text-primary-1.qa-cart-button")
+	@FindBy(css=".ic-cart.text-primary-1.qa-cart-button.justify-end.flex")
 	 WebElement cartHeader;
 	
 	@FindBy(css="[routerlink*='myorders']")
