@@ -31,6 +31,10 @@ public class CartPage extends abstractComponent{
 	WebElement totalBelanja;
 	@FindBy(css="div[class='text-sm md:text-xl font-black']")
 	WebElement totalHarga;
+	@FindBy(css="span[class='text-neutral-600 text-sm']")
+	WebElement earnJTPointCart;
+	@FindBy(css=".float-right")
+	WebElement JTPointRingkasanBelanjaCart;
 
 
 
@@ -97,6 +101,42 @@ public class CartPage extends abstractComponent{
 		String totalHargaOnCart = totalHarga.getText();
 		return totalHargaOnCart;
 	}
+
+	public String verifyJTPointEarnShownBelowProductCart() {
+		try
+		{
+			// Some code
+			String JTPointBelowProductCart = earnJTPointCart.getText();
+			return JTPointBelowProductCart;
+		}
+		catch(Exception e)
+		{
+			// Code for Handling the exception
+			System.out.println("Product don't get JTPoint");
+			return null;
+
+		}
+
+	}
+
+	public String verifyJTPointEarnShownOnRingkasanBelanjaCart() {
+		try
+		{
+			// Some code
+			String JTPointOnRingkasanBelanjaCart =  JTPointRingkasanBelanjaCart.getText();
+			return JTPointOnRingkasanBelanjaCart;
+		}
+		catch(Exception e)
+		{
+			// Code for Handling the exception
+			System.out.println("User don't get JTPoint");
+			return null;
+
+		}
+
+	}
+
+
 
 
 }

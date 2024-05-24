@@ -84,4 +84,17 @@ public class CartPageTest extends baseTesting {
         
     }
 
+    @Test
+    public void JTPointEarnMatchWithRingkasanBelanja(){
+        HomePage homePage = new HomePage(driver);
+        homePage.popUpAfterlogin();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.goToCartPage();
+
+        //Verify user get JTPoint on Cart
+        cartPage.verifyJTPointEarnShownBelowProductCart();
+        cartPage.verifyJTPointEarnShownOnRingkasanBelanjaCart();
+    }
+
 }
